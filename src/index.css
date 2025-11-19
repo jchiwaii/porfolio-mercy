@@ -1,15 +1,17 @@
 :root {
-  --bg-color: #0a0a0a;
-  --text-color: #ededed;
-  --accent-color: #e11d48;
-  /* A nice cinematic red/pink */
-  --secondary-text: #a1a1a1;
-  --card-bg: #171717;
-  --border-color: #262626;
+  --bg-color: #030304;
+  /* Deep, rich dark blue-black */
+  --text-color: #ffffff;
+  --accent-color: #3b82f6;
+  /* Modern SaaS Blue, or we can keep the red if they prefer. Let's stick to a premium blue/violet or keep the red? User liked "luxury". Red is bold. Let's try a vibrant violet/blue gradient for SaaS feel, or maybe a sophisticated white/silver. Let's stick to a clean white/grey with subtle gradients. */
+  --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  --secondary-text: #9ca3af;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --border-color: rgba(255, 255, 255, 0.08);
 
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Fonts */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
 
   color-scheme: dark;
   color: var(--text-color);
@@ -21,7 +23,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 * {
   margin: 0;
@@ -32,6 +34,9 @@
 body {
   min-height: 100vh;
   overflow-x: hidden;
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  /* Subtle grain or noise could be nice, but let's keep it clean for now */
 }
 
 h1,
@@ -40,9 +45,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Outfit', sans-serif;
-  line-height: 1.1;
+  font-family: var(--font-heading);
+  font-weight: 600;
   color: #ffffff;
+  letter-spacing: -0.02em;
+  /* Tighter tracking for modern feel */
 }
 
 a {
@@ -51,48 +58,19 @@ a {
   transition: color 0.2s ease;
 }
 
-a:hover {
-  color: var(--accent-color);
-}
-
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: var(--card-bg);
+  font-family: var(--font-body);
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: var(--accent-color);
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 /* Utility classes */
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.section {
-  padding: 6rem 0;
-}
-
-.grid {
-  display: grid;
-  gap: 2rem;
-}
-
-/* Scrollbar */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -108,21 +86,4 @@ button:focus-visible {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #444;
-}
-
-/* Custom Utilities */
-.text-accent {
-  color: var(--accent-color);
-}
-
-.bg-accent {
-  background-color: var(--accent-color);
-}
-
-.font-outfit {
-  font-family: 'Outfit', sans-serif;
-}
-
-.text-secondary {
-  color: var(--secondary-text);
 }

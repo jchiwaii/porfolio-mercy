@@ -28,14 +28,14 @@ const About = () => {
                         className="about-content"
                     >
                         <h2 className="about-title">The Vision</h2>
-                        <h3 className="about-subtitle">Filmmaker & Visual Storyteller</h3>
+                        <h3 className="about-subtitle">Visual Storyteller</h3>
 
                         <div className="about-text">
                             <p>
-                                I believe that every frame should tell a story. With over 5 years of experience in cinematography and direction, I've dedicated my craft to capturing the raw emotion and authentic moments that define our human experience.
+                                Every frame is an opportunity to evoke emotion. With a passion for cinematic excellence, I specialize in creating visual narratives that leave a lasting impact.
                             </p>
                             <p>
-                                My approach combines technical precision with artistic intuition. Whether it's a music video, commercial, or documentary, I strive to create visuals that not only look beautiful but resonate on a deeper emotional level.
+                                My approach blends technical mastery with artistic intuition. From high-energy music videos to compelling documentaries, I strive for perfection in every shot.
                             </p>
                         </div>
 
@@ -45,7 +45,7 @@ const About = () => {
                                 <span className="stat-label">Projects</span>
                             </div>
                             <div className="stat-item">
-                                <span className="stat-number">5+</span>
+                                <span className="stat-number">05</span>
                                 <span className="stat-label">Years Exp.</span>
                             </div>
                             <div className="stat-item">

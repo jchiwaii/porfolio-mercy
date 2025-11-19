@@ -36,7 +36,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
           className="hero-title"
         >
-          Cinematic Luxury <span>for discerning brands</span>
+          Cinematic luxury <span>crafted for discerning brands</span>
         </motion.h1>
 
         <motion.p
@@ -45,25 +45,14 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
           className="hero-description"
         >
-          Bespoke video direction and artful production inspired by couture
-          houses, contemporary architecture, and the quiet confidence of
-          heritage brands.
+          Bespoke direction with couture-level detail for launches, flagships,
+          and private moments.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
-          className="hero-meta"
-        >
-          <span className="meta-pill">Global studio • Lagos ↔ New York</span>
-          <span className="meta-pill">Cannes Lions shortlist 2024</span>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
           className="hero-buttons"
         >
           <a href="#work" className="btn-primary">
@@ -79,7 +68,7 @@ const Hero = () => {
         <motion.ul
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
+          transition={{ duration: 0.5, delay: 0.35, ease: "easeOut" }}
           className="hero-stats"
         >
           {statHighlights.map((stat) => (

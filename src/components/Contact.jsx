@@ -16,7 +16,7 @@ const Contact = () => {
                     >
                         <h2 className="contact-title">Let's Create Together</h2>
                         <p className="contact-text">
-                            Have a project in mind? I'm always open to discussing new ideas and collaborations.
+                            New commissions and thoughtful collaborations, handled discreetly.
                         </p>
                         <a href="mailto:hello@mercy.com" className="contact-email">
                             hello@mercy.com

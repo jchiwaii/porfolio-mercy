@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import './VideoModal.css';
 
-const VideoModal = ({ isOpen, onClose, videoUrl, title }) => {
-    if (!isOpen) return null;
+const VideoModal = ({ video, isOpen, onClose }) => {
+    if (!isOpen || !video) return null;
 
     return (
         <AnimatePresence>
@@ -28,15 +28,15 @@ const VideoModal = ({ isOpen, onClose, videoUrl, title }) => {
 
                     <div className="video-wrapper">
                         <iframe
-                            src={videoUrl}
-                            title={title}
+                            src={video.videoUrl}
+                            title={video.title}
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         ></iframe>
                     </div>
 
-                    <h3 className="modal-video-title">{title}</h3>
+                    <h3 className="modal-video-title">{video.title}</h3>
                 </motion.div>
             </motion.div>
         </AnimatePresence>

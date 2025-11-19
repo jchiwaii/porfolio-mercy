@@ -8,7 +8,7 @@ const About = () => {
             <div className="container">
                 <div className="about-grid">
                     <motion.div
-                        initial={{ opacity: 0, x: -30 }}
+                        initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         className="about-image-wrapper"
@@ -18,39 +18,40 @@ const About = () => {
                             alt="Filmmaker filming"
                             className="about-image"
                         />
-                        <div className="about-image-accent" />
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, x: 30 }}
+                        initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         className="about-content"
                     >
-                        <h2 className="about-title">The Vision</h2>
-                        <h3 className="about-subtitle">Visual Storyteller</h3>
+                        <div>
+                            <h2 className="about-title">About Us</h2>
+                            <h3 className="about-subtitle">Visual Storytelling for the Digital Age</h3>
+                        </div>
 
                         <div className="about-text">
                             <p>
-                                Every frame is an opportunity to evoke emotion. With a passion for cinematic excellence, I specialize in creating visual narratives that leave a lasting impact.
+                                We believe that every brand has a unique story waiting to be told. Our mission is to translate your vision into compelling visual narratives that drive engagement and growth.
                             </p>
                             <p>
-                                My approach blends technical mastery with artistic intuition. From high-energy music videos to compelling documentaries, I strive for perfection in every shot.
+                                With a focus on technical precision and artistic excellence, we deliver high-quality video production services tailored to modern digital platforms.
                             </p>
                         </div>
 
                         <div className="about-stats">
                             <div className="stat-item">
                                 <span className="stat-number">50+</span>
-                                <span className="stat-label">Projects</span>
+                                <span className="stat-label">Projects Delivered</span>
                             </div>
                             <div className="stat-item">
-                                <span className="stat-number">05</span>
-                                <span className="stat-label">Years Exp.</span>
+                                <span className="stat-number">5+</span>
+                                <span className="stat-label">Years Experience</span>
                             </div>
                             <div className="stat-item">
                                 <span className="stat-number">12</span>
-                                <span className="stat-label">Awards</span>
+                                <span className="stat-label">Industry Awards</span>
                             </div>
                         </div>
                     </motion.div>

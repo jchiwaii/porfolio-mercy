@@ -1,29 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,200;6..72,500;6..72,700&family=IBM+Plex+Sans:wght@200;400;600&family=JetBrains+Mono:wght@300;600&display=swap');
+
 :root {
-  --bg-color: #030304;
-  /* Deep, rich dark blue-black */
-  --text-color: #ffffff;
-  --accent-color: #3b82f6;
-  /* Modern SaaS Blue, or we can keep the red if they prefer. Let's stick to a premium blue/violet or keep the red? User liked "luxury". Red is bold. Let's try a vibrant violet/blue gradient for SaaS feel, or maybe a sophisticated white/silver. Let's stick to a clean white/grey with subtle gradients. */
-  --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-  --secondary-text: #9ca3af;
-  --card-bg: rgba(255, 255, 255, 0.03);
-  --border-color: rgba(255, 255, 255, 0.08);
+  --bg-base: #050609;
+  --bg-muted: #0b0f16;
+  --bg-card: rgba(10, 12, 18, 0.85);
+  --bg-elevated: rgba(18, 22, 32, 0.5);
+  --text-primary: #f6f1e7;
+  --text-secondary: #bab5a9;
+  --text-tertiary: #7b776e;
+  --accent-color: #f2c07a;
+  --accent-soft: #ffe2b7;
+  --accent-emerald: #62ffd3;
+  --border-color: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.25);
+  --shadow-soft: 0 25px 60px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 35px 80px rgba(242, 192, 122, 0.35);
+  --font-display: 'Newsreader', 'Times New Roman', serif;
+  --font-sans: 'IBM Plex Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  --container-width: 1240px;
 
-  /* Fonts */
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
-
-  color-scheme: dark;
-  color: var(--text-color);
-  background-color: var(--bg-color);
-
+  color: var(--text-primary);
+  background-color: var(--bg-base);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 * {
   margin: 0;
@@ -34,9 +37,28 @@
 body {
   min-height: 100vh;
   overflow-x: hidden;
-  font-family: var(--font-body);
-  background-color: var(--bg-color);
-  /* Subtle grain or noise could be nice, but let's keep it clean for now */
+  font-family: var(--font-sans);
+  background-color: var(--bg-base);
+  background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(242, 192, 122, 0.08), transparent 30%),
+    linear-gradient(135deg, #050609 0%, #050609 45%, #0a0f18 100%);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/006/330/467/original/seamless-grunge-pattern-grainy-texture-of-dust-on-white-background-vector.jpg');
+  opacity: 0.07;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.app {
+  background: transparent;
 }
 
 h1,
@@ -45,45 +67,52 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-heading);
+  font-family: var(--font-display);
   font-weight: 600;
-  color: #ffffff;
-  letter-spacing: -0.02em;
-  /* Tighter tracking for modern feel */
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+p {
+  color: var(--text-secondary);
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
 }
 
 button {
-  font-family: var(--font-body);
+  font-family: var(--font-sans);
   cursor: pointer;
 }
 
-/* Utility classes */
 .container {
-  max-width: 1280px;
+  width: min(var(--container-width), calc(100% - 3rem));
   margin: 0 auto;
-  padding: 0 2rem;
 }
 
-/* Custom Scrollbar */
+section {
+  position: relative;
+}
+
+::selection {
+  background: var(--accent-color);
+  color: #1a1208;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-color);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #444;
+  background: rgba(255, 255, 255, 0.35);
 }
